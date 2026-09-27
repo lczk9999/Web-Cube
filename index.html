@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>WebCube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="col-1">
+        <div class="bloco">
+            <h3>Calendar</h3>
+            <div id="mostrar-calendario"></div>
+        </div>
+
+        <div class="bloco">
+            <h3>Cronômetro</h3>
+            <div id="tempo" style="font-size: 20px;">00:00:00</div>
+            <button onclick="iniciar()">Iniciar</button>
+            <button onclick="parar()">Parar</button>
+            <button onclick="limpar()">Limpar</button>
+        </div>
+    </div>
+
+    <div class="col-2">
+        <h1 class="titulo">WebCube</h1>
+        <div class="quadrado"></div>
+        
+        <div>
+            <input type="text" id="campo-busca" placeholder="Digite para buscar...">
+            <button onclick="showSearchLinks()">Share</button>
+            
+            <div id="div-links" style="display: none; margin-top: 10px;">
+                <a href="https://google.com" target="_blank" style="color: #00ff66; display: block;">Google</a>
+                <a href="https://youtube.com" target="_blank" style="color: #00ff66; display: block;">YouTube</a>
+                <a href="https://github.com" target="_blank" style="color: #00ff66; display: block;">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bloco">
+            <h3>Notas</h3>
+            <textarea id="texto-notas" style="width: 85%; height: 70px;"></textarea>
+            <button onclick="salvarNotas()">Salvar</button>
+        </div>
+
+        <div class="bloco">
+            <h3>Mini Game</h3>
+            <button onclick="alternarJogo()">Iniciar / Fechar Jogo</button>
+            <div id="tela-do-jogo">
+                <div id="pontos" style="color: #00ff66; font-size: 11px;">Score: 0</div>
+                <div id="boneco"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
